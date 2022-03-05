@@ -10,3 +10,7 @@ User.create!(name: 'john', bio: 'faithful')
 User.create!(name: 'john doe', bio: 'faithful')
 User.create!(name: 'jamws', bio: 'joy')
 
+user1 = User.create!(name: 'jamws', bio: 'joy')
+
+user1.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
+
