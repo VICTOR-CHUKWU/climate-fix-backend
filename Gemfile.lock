@@ -195,8 +195,10 @@ GEM
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2021.5)
       tzinfo (>= 1.0.0)
+    unicode-display_width (2.1.0)
     uri (0.11.0)
-
+    warden (1.2.9)
+      rack (>= 2.0.9)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -209,6 +211,7 @@ DEPENDENCIES
   bootsnap
   cancancan
   debug
+  devise
   ffi
   jbuilder
   net-http
