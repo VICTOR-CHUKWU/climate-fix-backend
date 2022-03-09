@@ -14,6 +14,8 @@ gem "puma", "~> 5.0"
 
 gem 'ffi'
 
+gem 'active_model_serializers', '~> 0.10.13'
+
 gem 'net-http'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
