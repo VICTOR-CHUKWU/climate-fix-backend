@@ -20,7 +20,7 @@ user5 = User.create!(name: 'jamws', bio: 'joy')
 user1 = User.create!(name: 'jamws', bio: 'joy')
 
 user5.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
-user1.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
+post1 = user1.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
 user1.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
 user1.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
 user1.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
@@ -31,8 +31,13 @@ user2.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah
 user2.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
 user2.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
 
-# user1.Post.comments.create!(description: 'this is a great posts by user1')
-user2.posts.Comment.create!( description: 'wow what a post by this user2' )
+firstcomment =user1.comments.create!( post: post1, description: 'this is a great posts by user1')
+# user2.posts.Comment.create!( description: 'wow what a post by this user2' )
 # user2.posts.comments.create!(description: 'wow what a post by this user2')
 # user2.posts.comments.create!(description: 'wow what a post by this user2')
 # user1.posts.comments.create!(description: 'this is a great posts by user1')
+
+# sampleAppointments = Appointment.create([
+#   {user:@user1, doctor: sampleDoctors[0], time: Time.now, date: '24-02-2022'},
+#   {user:@user1, doctor: sampleDoctors[1], time: Time.now, date: '25-02-2022'},
+# ])

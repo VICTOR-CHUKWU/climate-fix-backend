@@ -11,15 +11,25 @@ class CommentsController < ApplicationController
   # GET /comments/1
   # GET /comments/1.json
   def show
+
   end
 
   # POST /comments
   # POST /comments.json
   def create
     @comment = Post.comments.new(comment_params)
+      # @reservation.reservation_time = params[:reservation][:reservation_time]
+      @comment.user = User.find_by(id: params[:comment][:user])
+      @comment.post = Post.find_by(id: params[:comment][:post])
+      @commentt = {}
+      @commentt['comment'] = @comment
+      @commentt['user'] = @comment.user
+      @commentt['post'] = @comment.post
 
+
+     
     if @comment.save
-      render :show, status: :created, location: @comment
+      render :@commentt, status: :created, location: @comment
     else
       render json: @comment.errors, status: :unprocessable_entity
     end
