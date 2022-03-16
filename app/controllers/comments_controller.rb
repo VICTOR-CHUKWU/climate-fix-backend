@@ -4,32 +4,72 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.all
-    render json: @comments, only: [:description]
   end
+  # def index
+  #   @comments = Post.comments
+
+  #   i = 0
+  #   @commentt = []
+  #   while i < @comments.length
+  #    comment = {}
+  #    comment['comment'] = @comments[i]
+  #    comment['post'] = Post.find_by(id: @comments.post)
+  #    comment['user'] = User.find_by(id: @comments[i].user)
+  #     @commentt.push(comment)
+  #     i += 1
+  #   end
+  #   # @commentt['post'] =comment.find_by(id: @comment.post)
+  #   render json: @commentt, only: [:description, :user_id]
+  # end
 
   # GET /comments/1
   # GET /comments/1.json
   def show
-
+    @commentt = {}
+    @commentt['comment'] = @comment
+    @commentt['user'] = User.find_by(id: @comment.user)
+    @commentt['post'] = Post.find_by(id: @comment.post)
+     #@commentt
+     render json:@commentt
   end
 
   # POST /comments
   # POST /comments.json
-  def create
-    @comment = Post.comments.new(comment_params)
-      # @reservation.reservation_time = params[:reservation][:reservation_time]
-      @comment.user = User.find_by(id: params[:comment][:user])
-      @comment.post = Post.find_by(id: params[:comment][:post])
-      @commentt = {}
-      @commentt['comment'] = @comment
-      @commentt['user'] = @comment.user
-      @commentt['post'] = @comment.post
+  # def create
+  #   @comment = Post.comments.new(comment_params)
+  #     # @reservation.reservation_time = params[:reservation][:reservation_time]
+  #     @comment.user = User.find_by(id: params[:comment][:user])
+  #     @comment.post = Post.find_by(id: params[:comment][:post])
+  #     @commentt = {}
+  #     @commentt['comment'] = @comment
+  #     @commentt['user'] = @comment.user
+  #     @commentt['post'] = @comment.post
 
 
      
+  #   if @comment.save
+  #     render :@commentt, status: :created, location: @comment
+  #   else
+  #     render json: @comment.errors, status: :unprocessable_entity
+  #   end
+  # end
+  
+  def create
+    @comment = Post.comments.new
+    @comment = User.comments.new
+    @comment= params[:comment][ :description, :user_id]
+    @comment.user = User.find_by(id: params[:comment][:user])
+    @comment.post = Post.find_by(id: params[:comment][:post])
+    # @post.doctor = Doctor.find_by(id: params[:post][:doctor])
+    # @post_hash = Post.return_post_user(@post)
+
+    @commentt = {}
+    @commentt['comment'] = @comment
+    @commentt['user'] = User.find_by(id: @comment.user)
+    @commentt['post'] = Post.find_by(id: @comment.post)
+  
     if @comment.save
-      render :@commentt, status: :created, location: @comment
+      render json: @commentt, status: :created, location: @comments
     else
       render json: @comment.errors, status: :unprocessable_entity
     end
@@ -59,6 +99,6 @@ class CommentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def comment_params
-      params.require(:comment).permit(:description, :User_id, :Post_id)
+      params.require(:comment).permit(:description, :user_id)
     end
 end

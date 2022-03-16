@@ -8,6 +8,8 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    #  @user = User.includes(:posts).find(params[:user_id])
+    # @posts = @user.posts.includes(:comments).order(created_at: :desc)
     i = 0
     @posts_hash = []
     while i < @posts.length
@@ -30,6 +32,8 @@ class PostsController < ApplicationController
    @postt = {}
    @postt['post'] = @post
    @postt['user'] = User.find_by(id: @post.user)
+   @postt['comment'] = @post.comments
+
     #@postt
     render json:@postt
   end
@@ -66,13 +70,13 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
-  def update
-    if @post.update(post_params)
-      render :show, status: :ok, location: @post
-    else
-      render json: @post.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @post.update(post_params)
+  #     render :show, status: :ok, location: @post
+  #   else
+  #     render json: @post.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /posts/1
   # DELETE /posts/1.json

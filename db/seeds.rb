@@ -19,7 +19,7 @@ user5 = User.create!(name: 'jamws', bio: 'joy')
 
 user1 = User.create!(name: 'jamws', bio: 'joy')
 
-user5.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
+post2= user5.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
 post1 = user1.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
 user1.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
 user1.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
@@ -32,6 +32,9 @@ user2.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah
 user2.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
 
 firstcomment =user1.comments.create!( post: post1, description: 'this is a great posts by user1')
+firstcomment =user5.comments.create!( post: post2, description: 'this is a eat posts by user1')
+firstcomment =user1.comments.create!( post: post1, description: 'this is a great posts by user1')
+# secondcomment =user5.comments.create!( post: post2, description: 'this is a great ')
 # user2.posts.Comment.create!( description: 'wow what a post by this user2' )
 # user2.posts.comments.create!(description: 'wow what a post by this user2')
 # user2.posts.comments.create!(description: 'wow what a post by this user2')
