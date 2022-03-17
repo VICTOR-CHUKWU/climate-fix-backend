@@ -19,9 +19,9 @@ user5 = User.create!(name: 'jamws', bio: 'joy')
 
 user1 = User.create!(name: 'jamws', bio: 'joy')
 
-post2= user5.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
-post1 = user1.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
-post3 = user3.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'url')
+post2= user5.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
+post1 = user1.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
+post3 = user3.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
 user1.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'https://unsplash.com/wallpapers/nature/floral')
 user1.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
 user1.posts.create!(title: 'thunder storm', description: 'lorem ipsum isakfdfjah', picture: 'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
