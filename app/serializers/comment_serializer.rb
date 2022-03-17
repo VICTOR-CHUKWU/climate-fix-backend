@@ -2,7 +2,6 @@ class CommentSerializer < ActiveModel::Serializer
   attributes :id, :description
 end
 
-
 def new
   @post = Post.new
 end

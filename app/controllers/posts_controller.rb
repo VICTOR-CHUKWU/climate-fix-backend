@@ -1,13 +1,14 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[ show update destroy ]
+  before_action :set_post, only: %i[show update destroy]
 
-  # def new 
+  # def new
   #   @post = post.new
 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    # @posts = Post.all
+    @posts = Post.order(:commentscounter)
     #  @user = User.includes(:posts).find(params[:user_id])
     # @posts = @user.posts.includes(:comments).order(created_at: :desc)
     i = 0
@@ -23,19 +24,17 @@ class PostsController < ApplicationController
     render json: @posts_hash
   end
 
-  
-
   # GET /posts/1
   # GET /posts/1
   # GET /posts/1.json
   def show
-   @postt = {}
-   @postt['post'] = @post
-   @postt['user'] = User.find_by(id: @post.user)
-   @postt['comment'] = @post.comments
+    @postt = {}
+    @postt['post'] = @post
+    @postt['user'] = User.find_by(id: @post.user)
+    @postt['comment'] = @post.comments
 
-    #@postt
-    render json:@postt
+    # @postt
+    render json: @postt
   end
 
   # POST /posts
@@ -52,7 +51,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new
-    @post= params[:post][:title, :description, :picture]
+    @post = params[:post][:title, :description, :picture]
     @post.user = User.find_by(id: params[:post][:user])
     # @post.doctor = Doctor.find_by(id: params[:post][:doctor])
     # @post_hash = Post.return_post_user(@post)
@@ -60,7 +59,7 @@ class PostsController < ApplicationController
     @postt = {}
     @postt['post'] = @post
     @postt['user'] = User.find_by(id: @post.user)
-  
+
     if @post.save
       render json: @postt, status: :created, location: @posts
     else
@@ -85,15 +84,16 @@ class PostsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def post_params
-      params.require(:post).permit(:title, :description, :picturem, :commentscounter, :likescounter)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def post_params
+    params.require(:post).permit(:title, :description, :picture, :commentscounter, :likescounter)
+  end
 end
 
 # def create

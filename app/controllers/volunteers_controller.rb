@@ -1,5 +1,5 @@
 class VolunteersController < ApplicationController
-  before_action :set_volunteer, only: %i[ show update destroy ]
+  before_action :set_volunteer, only: %i[show update destroy]
 
   # GET /volunteers
   # GET /volunteers.json
@@ -9,8 +9,7 @@ class VolunteersController < ApplicationController
 
   # GET /volunteers/1
   # GET /volunteers/1.json
-  def show
-  end
+  def show; end
 
   # POST /volunteers
   # POST /volunteers.json
@@ -41,13 +40,14 @@ class VolunteersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_volunteer
-      @volunteer = Volunteer.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def volunteer_params
-      params.require(:volunteer).permit(:name, :email, :User_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_volunteer
+    @volunteer = Volunteer.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def volunteer_params
+    params.require(:volunteer).permit(:name, :email, :User_id)
+  end
 end
