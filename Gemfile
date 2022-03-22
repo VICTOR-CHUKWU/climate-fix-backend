@@ -7,7 +7,7 @@ ruby '2.7.5'
 gem 'rails', '~> 7.0.2', '>= 7.0.2.2'
 
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1'
+gem 'pg'
 
 gem 'devise'
 
