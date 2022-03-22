@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-    render json: @users, only: %i[:id, :name]
+    render json: @users, only: %i[id name]
   end
 
   # GET /users/1
@@ -18,12 +18,12 @@ class UsersController < ApplicationController
     @user = User.new(user_params[:title, :description, :picture])
 
     if @user.save
-       render json: {
+      render json: {
         status: :created,
-         user: @user
+        user: @user
       }
     else
-      render json: { status: 500}
+      render json: { status: 500 }
     end
   end
 
