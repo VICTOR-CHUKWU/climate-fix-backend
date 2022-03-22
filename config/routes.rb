@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :destroy, :index]
     resources :likes, only: [:create]
   end
-  resources :users
+  resources :users, only: [:create]
   resources :sessions, only: [:create]
   resources :registrations, only: [:create]
   delete :logout, to: "sessions#logout"

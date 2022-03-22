@@ -47,9 +47,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_04_234620) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.string "bio"
     t.string "email"
-    t.string "password_digest"
     t.integer "postcounter", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
