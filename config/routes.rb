@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :projects
   devise_for :users, defaults: { format: :json },
   controllers: {
       sessions: 'users/sessions',
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   }
 
   resources :volunteers
+  resources :projects
   # resources :likes
   resources :posts do
     resources :comments, only: [:create, :destroy, :index]
