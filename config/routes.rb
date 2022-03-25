@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   end
   # resources :users, only: [:index, :show]
   resources :user, only: [:index, :show] do
-    resources :posts, only: [:create, :index, :show]
+    resources :posts, only: [:create]
   end 
   # resources :sessions, only: [:create]
   # resources :registrations, only: [:create]
