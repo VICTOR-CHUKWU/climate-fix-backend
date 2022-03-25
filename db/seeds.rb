@@ -12,12 +12,12 @@ ActiveRecord::Base.connection.tables.each do |t|
     ActiveRecord::Base.connection.reset_pk_sequence!(t)
 end
 
-user2 = User.create!(name: 'Victor', email: 'vic@gmail.com')
-user3 = User.create!(name: 'Joshua', email: 'josh@gmail.com')
-user4 = User.create!(name: 'john doe', email: 'john@gmail.com')
-user5 = User.create!(name: 'Glorey', email: 'glorey@gmail.com')
+user2 = User.create!(name: 'Victor', email: 'vic@gmail.com', password: '12345678')
+user3 = User.create!(name: 'Joshua', email: 'josh@gmail.com', password: '12345678')
+user4 = User.create!(name: 'john doe', email: 'john@gmail.com', password: '12345678')
+user5 = User.create!(name: 'Glorey', email: 'glorey@gmail.com', password: '12345678')
 
-user1 = User.create!(name: 'Tufoin', email: 'tufoin@gmail.com')
+user1 = User.create!(name: 'Tufoin', email: 'tufoin@gmail.com', password: '12345678')
 
 post2= user5.posts.create!(title: 'Effect of Bush Burning', description: 'Bush burning, whether the result of a wildfire or a controlled burn, affects not only the appearance of the landscape, but the quality of the soil. The landscape may quickly recover after a fire, with fresh new growth and emerging seedlings. However, bush burning has a negative effect on soil conditions, and soil may take much longer to recover, according to the National Resources Conservation Service.', picture: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
 post1 = user1.posts.create!(title: 'Over flooding and Causes', description: 'Believe it or not, flooding is the deadliest type of severe weather. There’s probably a lot about floods and flooding you don’t know.
