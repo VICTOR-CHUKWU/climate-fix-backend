@@ -50,18 +50,20 @@ class PostsController < ApplicationController
   # end
 
   def create
-    @post = Post.new
-    @post = params[:post][:title, :description, :picture]
-    @post.user = User.find_by(id: params[:post][:user])
+    # @post = Post.new
+    # @post = params[:post][:title, :description, :picture]
+    # @post.user = User.find_by(id: params[:post][:user])
     # @post.doctor = Doctor.find_by(id: params[:post][:doctor])
     # @post_hash = Post.return_post_user(@post)
 
-    @postt = {}
-    @postt['post'] = @post
-    @postt['user'] = User.find_by(id: @post.user)
+    # @postt = {}
+    # @postt['post'] = @post
+    # @postt['user'] = User.find_by(id: @post.user)
+    @user = current_user
+    @post = @user.post.new(params.require(:post).permit(:title, :description, :picture))
 
     if @post.save
-      render json: @postt, status: :created, location: @posts
+      render json: @post, status: :created, location: @posts
     else
       render json: @post.errors, status: :unprocessable_entity
     end

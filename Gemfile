@@ -11,6 +11,8 @@ gem 'pg'
 
 gem 'devise'
 
+gem 'devise-jwt'
+
 gem 'cancancan'
 
 gem 'ffi'
