@@ -19,24 +19,24 @@ user5 = User.create!(name: 'Glorey', email: 'glorey@gmail.com', password: '12345
 
 user1 = User.create!(name: 'Tufoin', email: 'tufoin@gmail.com', password: '12345678')
 
-post2= user5.posts.create!(title: 'Effect of Bush Burning', description: 'Bush burning, whether the result of a wildfire or a controlled burn, affects not only the appearance of the landscape, but the quality of the soil. The landscape may quickly recover after a fire, with fresh new growth and emerging seedlings. However, bush burning has a negative effect on soil conditions, and soil may take much longer to recover, according to the National Resources Conservation Service.', picture: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
+post2= user5.posts.create!(title: 'Effect of Bush Burning', description: 'Bush burning, whether the result of a wildfire or a controlled burn, affects not only the appearance of the landscape, but the quality of the soil. The landscape may quickly recover after a fire, with fresh new growth and emerging seedlings. However, bush burning has a negative effect on soil conditions, and soil may take much longer to recover, according to the National Resources Conservation Service.', picture: 'https://www.kofastudy.com/kike_content/uploads/2020/11/Bush-burning_Easy-Resize.com-1-1024x768.jpg')
 post1 = user1.posts.create!(title: 'Over flooding and Causes', description: 'Believe it or not, flooding is the deadliest type of severe weather. There’s probably a lot about floods and flooding you don’t know.
 
     In this guide, we’ll go over everything there is to know about flooding; answering common questions like “What causes flooding?” and “Where does flooding occur?”
     
-    Use the buttons below to jump to the flood facts you care about the most, or read the entire Flooding 101 guide to become an expert!', picture: 'https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
+    Use the buttons below to jump to the flood facts you care about the most, or read the entire Flooding 101 guide to become an expert!', picture: 'https://oldmedia.ifrc.org/ifrc/wp-content/uploads/2018/09/20180817_085506021_iOS_edited.jpg')
 post3 = user3.posts.create!(title: 'How to stop bush burning', description: 'Believe it or not, flooding is the deadliest type of severe weather. There’s probably a lot about floods and flooding you don’t know.
 
     In this guide, we’ll go over everything there is to know about flooding; answering common questions like “What causes flooding?” and “Where does flooding occur?”
     
-    Use the buttons below to jump to the flood facts you care about the most, or read the entire Flooding 101 guide to become an expert!', picture: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
+    Use the buttons below to jump to the flood facts you care about the most, or read the entire Flooding 101 guide to become an expert!', picture: 'https://ak7.picdn.net/shutterstock/videos/5013527/thumb/1.jpg?ip=x480')
 user1.posts.create!(title: 'Thunder struck a priest', description: 'Suspected herdsmen, on Wednesday, attacked a Catholic priest and the Vicar of St Theresa’s Parish Agulu, Rev Fr Cornelius Okoye, along Ugwuoba/Amansea axis, Enugu- Onitsha Expressway, Enugu State.
 
     The priest, who narrowly escaped death, recounted his ordeal.
     He said he was coming back from a crusade when the herdsmen attacked him.
     
     According to him, his attackers shot at his car severally. They attacked him with different weapons and took him to a thick forest, where they blindfolded him.
-    He added that they made attempts to open his heart with a dagger before lightning and thunder', picture: 'https://media.istockphoto.com/photos/rhine-river-flooded-a-street-picture-id1302466743?b=1&k=20&m=1302466743&s=170667a&w=0&h=2tuHqaYov8MSmZ81LgT-qDeaQJoYPGY2hQWCMtEBjsE=')
+    He added that they made attempts to open his heart with a dagger before lightning and thunder', picture: 'https://cdn.britannica.com/37/190637-050-E76719D7/Lightning-farm-field-energy-tree-Weather-electricity.jpg')
 user1.posts.create!(title: 'Effect of Fossil fuel Burning', description: 'When fossil fuels are burned, they release large amounts of carbon dioxide, a greenhouse gas, into the air. Greenhouse gases trap heat in our atmosphere, causing global warming. Already the average global temperature has increased by 1C. Warming above 1.5°C risks further sea level rise, extreme weather, biodiversity loss and species extinction, as well as food scarcity, worsening health and poverty for millions of people worldwide.', picture: 'https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
 user1.posts.create!(title: 'Is climate change a scam?', description: 'As stated by the Intergovernmental Panel on Climate Change (IPCC), the largest contributor to global warming is the increase in atmospheric carbon dioxide (CO2) since 1750, particularly from fossil fuel combustion, cement production, and land use changes such as deforestation.[5] The IPCC\'s Fifth Assessment Report (AR5) states:
 
